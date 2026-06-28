@@ -6,7 +6,7 @@
 import math
 from dataclasses import MISSING
 
-from isaaclab.utils import configclass
+from isaaclab.utils.configclass import configclass
 from isaaclab.managers import SceneEntityCfg
 from isaaclab.managers import EventTermCfg as EventTerm
 from isaaclab.managers import RewardTermCfg as RewTerm
@@ -206,9 +206,7 @@ class XARMReachEnvCfg(ReachEnvCfg):
             prim_path="{ENV_REGEX_NS}/Robot/.*",
             history_length=3,
             track_air_time=False,
-            # Această linie îi spune senzorului să raporteze doar dacă robotul se atinge de EL ÎNSUȘI
-            # Dacă ai o masă, poți adăuga și masa aici: ["{ENV_REGEX_NS}/Robot/.*", "{ENV_REGEX_NS}/Table"]
-            filter_prim_paths_expr=["{ENV_REGEX_NS}/Robot/.*"]
+            filter_prim_paths_expr=["{ENV_REGEX_NS}/Robot/(world|link1|link2|link3|link4|link5|link6|EF)"],
         )
 
         # 2. Regulă: Oprește episodul dacă senzorul detectează forță (coliziune)
