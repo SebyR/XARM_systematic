@@ -12,7 +12,7 @@ from XARM_systematic.tasks.manager_based.xarm_systematic import agents
 ##
 
 gym.register(
-    id="Isaac-Reach-XARM-v0",
+    id="Sebi-Isaac-Reach-XARM-v0",
     entry_point="isaaclab.envs:ManagerBasedRLEnv",
     disable_env_checker=True,
     kwargs={
@@ -24,7 +24,7 @@ gym.register(
 )
 
 gym.register(
-    id="Isaac-Reach-XARM-Play-v0",
+    id="Sebi-Isaac-Reach-XARM-Play-v0",
     entry_point="isaaclab.envs:ManagerBasedRLEnv",
     disable_env_checker=True,
     kwargs={

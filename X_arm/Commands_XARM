@@ -1,16 +1,21 @@
 Train
 
-isaaclab.bat -p scripts/reinforcement_learning/rsl_rl/train.py --task=Isaac-Reach-XARM-v0 --num_envs=2048 --headless
-
-
-
-isaaclab.bat -p scripts/reinforcement_learning/rsl_rl/train.py --task=Isaac-Reach-UR10-v0 --num_envs=1024 --headless
+isaaclab.bat train --rl_library rsl_rl --task=Sebi-Isaac-Reach-XARM-v0 --num_envs=2048 --headless
 
 
 Play
 
-isaaclab.bat -p scripts/reinforcement_learning/rsl_rl/play.py --task=Isaac-Reach-XARM-Play-v0 --num_envs=10 --load  0_test_policy_4
+isaaclab.bat play --rl_library rsl_rl --task=Sebi-Isaac-Reach-XARM-Play-v0 --num_envs=10 --viz kit
 
 --load 0_test_policy_3
 
-isaaclab.bat -p scripts/reinforcement_learning/rsl_rl/play.py --task=Isaac-Reach-UR10-Play-v0 --num_envs=10
+
+PENTRU VIZ
+
+kit: The standard high-fidelity Omniverse/Isaac Sim GUI (this is the direct equivalent of what you are used to).
+
+newton: A fast, low-overhead OpenGL visualizer for quick iteration (only shows physics debug markers, joints, etc.).
+
+rerun: A web viewer with timeline scrubbing.
+
+viser: A browser-based viewer via the Newton Warp renderer.
