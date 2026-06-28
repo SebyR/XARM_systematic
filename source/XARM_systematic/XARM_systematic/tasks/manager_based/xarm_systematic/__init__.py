@@ -16,7 +16,7 @@ gym.register(
     entry_point="isaaclab.envs:ManagerBasedRLEnv",
     disable_env_checker=True,
     kwargs={
-        "env_cfg_entry_point": f"{__name__}.joint_pos_env_cfg:XARMReachEnvCfg",
+        "env_cfg_entry_point": f"{__name__}.config.xArm_systematic.joint_pos_env_cfg:XARMReachEnvCfg",
         "rl_games_cfg_entry_point": f"{agents.__name__}:rl_games_ppo_cfg.yaml",
         "rsl_rl_cfg_entry_point": f"{agents.__name__}.rsl_rl_ppo_cfg:XARMReachPPORunnerCfg",
         "skrl_cfg_entry_point": f"{agents.__name__}:skrl_ppo_cfg.yaml",
@@ -28,7 +28,7 @@ gym.register(
     entry_point="isaaclab.envs:ManagerBasedRLEnv",
     disable_env_checker=True,
     kwargs={
-        "env_cfg_entry_point": f"{__name__}.joint_pos_env_cfg:XARMReachEnvCfg_PLAY",
+        "env_cfg_entry_point": f"{__name__}.config.xArm_systematic.joint_pos_env_cfg:XARMReachEnvCfg_PLAY",
         "rl_games_cfg_entry_point": f"{agents.__name__}:rl_games_ppo_cfg.yaml",
         "rsl_rl_cfg_entry_point": f"{agents.__name__}.rsl_rl_ppo_cfg:XARMReachPPORunnerCfg",
         "skrl_cfg_entry_point": f"{agents.__name__}:skrl_ppo_cfg.yaml",

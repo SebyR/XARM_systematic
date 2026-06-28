@@ -12,7 +12,7 @@ from isaaclab.managers import EventTermCfg as EventTerm
 from isaaclab.managers import RewardTermCfg as RewTerm
 from isaaclab.managers import ObservationGroupCfg as ObsGroup
 from isaaclab.managers import ObservationTermCfg as ObsTerm
-from isaaclab.utils.noise import AdditiveUniformNoiseCfg as Unoise
+from isaaclab.utils.noise import UniformNoiseCfg as Unoise
 
 import isaaclab_tasks.manager_based.manipulation.reach.mdp as mdp
 from isaaclab_tasks.manager_based.manipulation.reach.reach_env_cfg import ReachEnvCfg
